@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Multiplication Table</h2>
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number" name="number" min="1">
+    <button onclick="generateTable()">Generate Table</button>
+    <br><br>
+    <div id="table-container"></div>
+    <script>
+        let username;
+
+        let myName = "Okasha Habib";
+
+        let message;
+
+        message = "Hello World";
+
+        // alert(message)
+
+        // let studentName = prompt('Enter your name: ');
+
+        // let studentAge = prompt("Enter your age: ");
+
+        // let studentQualification = prompt("Enter your Qualification")
+
+        // alert(studentName)
+        // alert(studentAge + " years old")
+        // alert(studentQualification);
+
+        let pizza = 'PIZZA PIZZ PIZ PI P'
+        // alert(pizza)
+
+        let email = "okasha@gmail.com"
+        // alert(email)
+
+        let book = "I am trying to learn from the book A smarter way to learn JavaScript"
+        // alert(book)
+
+        document.write('Yes I can write HTML content through JavaScript')
+        let dummy = "▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬"
+        // alert(dummy)
+
+        let x = 21, y = 12, z = 33;
+
+
+        //LEGAL VARIABLES
+        let name;
+        let userName;
+        let isAdmin;
+        let user_name;
+        let $name;
+        let _name;
+
+        //illegal Variables
+
+        // let my-name;
+        // let 2name;
+        // let let;
+        // let var ;
+        // let  if;
+        // let 1-name!;
+
+        let rulesHeading = "Rules for naming JS variables"
+        document.write('<h1>' + rulesHeading + '</h1>')
+
+        document.write('Variables names can only contain <b> $, numbers </b> or <b> _ For example $my_1stVariable</b></br>')
+        document.write('Variables must begin with a <b>letter , $ or _ For example: $name, _name, name</b></br>')
+        document.write('Variables names are <b>caseSensitive</b></br>')
+        document.write('Variables names should not be  <b>JS keywords</b>')
+
+        function generateTable() {
+            var number = parseInt(document.getElementById("number").value);
+            var tableContainer = document.getElementById("table-container");
+            var tableHTML = "<table><tr><th>Multiplicand</th><th>Multiplier</th><th>Product</th></tr>";
+
+            for (var i = 1; i <= 10; i++) {
+                var product = number * i;
+                tableHTML += "<tr><td>" + number + "</td><td>" + i + "</td><td>" + product + "</td></tr>";
+            }
+
+            tableHTML += "</table>";
+            tableContainer.innerHTML = tableHTML;
+        }
+    </script>
+</body>
+
+</html>
